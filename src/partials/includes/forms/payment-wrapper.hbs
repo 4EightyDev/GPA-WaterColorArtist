@@ -1,0 +1,43 @@
+
+<!-- Start Payment Wrapper -->
+<div id="paymentWrapper">
+	<div class="row p-3">
+		<div class="col-12">
+			<h6 class="m-0 text-uppercase text-gray-dark">Payment Method</h6>
+		</div>
+	</div>
+
+	<div id="creditCardName" class="row px-3">
+		<div class="col-12 form-floating mb-3">
+			<input type="text" id="formNameOnCard" class="form-control" placeholder="Name on Card">
+			<label for="formNameOnCard">Name on Card</label>
+		</div>
+	</div>
+	<div id="creditCardFields" class="row px-0 mb-2 mx-3 gx-0 rounded border">
+		<div class="col-sm-6 col-xl-8 form-floating">
+			<input type="text" id="formCardNumber" class="form-control border-0 border-bottom rounded-0 rounded-top" placeholder="Card number" maxlength="16">
+			<label for="formCardNumber">Credit Card Number</label>
+		</div>
+		<div class="col form-floating">
+			<input type="text" id="formExpiration" class="form-control border-0 border-end rounded-0 rounded-start" placeholder="MM/YYY">
+			<label for="formExpiration">MM/YYY</label>
+		</div>
+		<div class="col form-floating">
+			<input type="text" id="formCVC" class="form-control border-0 rounded-0 rounded-end" placeholder="CVC">
+			<label for="formCVC">CVC</label>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="row mx-3">
+		<div class="col-lg-8 offset-lg-4">
+			<span class="help-text d-block fs-6 text-muted mb-3">No spaces or dashes in card number.</span>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 mb-3">
+			<div class="d-grid gap-2">
+				<a class="btn btn-primary btn-lg" href="#" title="Place Order">PLACE ORDER</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,68 @@
+
+<!-- Start Delivery Wrapper -->
+<div id="deliveryWrapper" class="collapse py-3 mb-3 mx-3 bg-gray-lighter rounded border">
+	<div class="row px-3">
+		<div class="col">
+			<p class="fw-normal">Delivery Address</p>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryFirstName" placeholder="First Name" required maxlength="32">
+			<label for="deliveryFirstName">First Name</label>
+		</div>
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryLastName" placeholder="Last Name" required maxlength="32">
+			<label for="deliveryLastName">Last Name</label>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryAddress" placeholder="Address" required>
+			<label for="deliveryAddress">Address</label>
+		</div>
+		<div class="col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryAddress2" placeholder="Address Line 2">
+			<label for="deliveryAddress2">Address Line 2</label>
+			<!-- Address Fit Ttrigger Modal -->
+			<span class="help-text d-block fs-6 text-muted mt-2 text-end"><a href="" data-bs-toggle="modal" data-bs-target="#addressDoesntFit" title="Address Doesn't Fit">Address doesn’t fit?</a></span>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryCity" placeholder="City" required maxlength="32">
+			<label for="deliveryCity">City</label>
+		</div>
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating">
+			<input class="form-control" list="deliveryProvinceOptions" id="deliveryProvince" placeholder="Choose Province/State" required>
+			<label for="deliveryProvince" class="form-label">Choose Province/State</label>
+			<datalist id="deliveryProvinceOptions">
+				<?php include 'includes/forms/state-options.php';?>
+			</datalist>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryPostalCode" placeholder="Zip/Postal Code" required maxlength="12">
+			<label for="deliveryPostalCode">Zip/Postal Code</label>
+		</div>
+		<div class="col-sm-6 form-floating">
+			<input class="form-control" list="deliveryCountryOptions" id="deliveryCountry" placeholder="Choose Country" required>
+			<label for="deliveryCountry" class="form-label">Choose Country</label>
+			<datalist id="deliveryCountryOptions">
+				<?php include 'includes/forms/country-options.php';?>
+			</datalist>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="deliveryPhoneNumber" placeholder="Phone" required maxlength="16">
+			<label for="deliveryPhoneNumber">Phone</label>
+		</div>
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating">
+			<input type="text" class="form-control" id="deliveryEmail" placeholder="Email" required maxlength="32" error="Email address is missing">
+			<label for="deliveryEmail">Email</label>
+			<span class="help-text d-block fs-6 text-muted mt-2">Will be used in accordance with our <a href="#" title="User Agreement" target="_blank">User Agreement</a> & <a href="https://s31226.p831.sites.pressdns.com/privacy-policy" title="Privacy Policy" target="_blank">Privacy Policy</a>.</span>
+		</div>
+	</div>
+</div>

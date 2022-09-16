@@ -1,0 +1,41 @@
+// Import Functions & Variables
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&family=Roboto+Slab:wght@400;500&display=swap');
+
+// Custom Theme Colors
+$custom-theme-colors: (
+     "primary_dark": #1E73BE,
+     "primary_light": #D4EEFA,
+     "black": #151515,
+     "gray_darker": #252525,
+     "gray_dark": #333232,
+     "gray_base": #6e6e6e,
+     "gray_light": #e0e0e0,
+     "gray_lighter": #f8f8f8
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// Custom Variables
+$primary: #37B5E7;
+:root {
+     --primary: #37B5E7;
+     --primary_dark: #1E73BE;
+     --primary_light: #D4EEFA;
+     --black: #151515;
+     --gray_darker: #252525;
+     --gray_dark: #333232;
+     --gray_base: #6e6e6e;
+     --gray_light: #e0e0e0;
+     --gray_lighter: #f8f8f8;
+     --white: #FFF;
+}
+
+// Import Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Custom Stylesheet
+@import "../scss/theme.scss";

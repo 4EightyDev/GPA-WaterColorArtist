@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+{{> partials/structure/open}}
+
+          <!-- Find Account Dialog -->
+          <div id="findAccount" class="toast show rounded-0 border-0" role="alert" aria-live="assertive" aria-atomic="true">
+               <div class="toast-wrap bg-white rounded">
+                    <div class="toast-header">
+                         <h4 class="modal-title" id="contactUsLabel">Let's Find Your Account</h4>
+                         <a href="" class="ms-auto" data-bs-dismiss="toast">I'll type it in</a>
+                    </div>
+                    <div class="toast-body">
+                         <p>If you are a current active magazine or membership subscriber, please complete the details below to autofill your account information.</p>
+                         <form>
+                              <div class="form-floating mb-3">
+                                   <input type="text" class="form-control" id="accountNumber" placeholder="Account Number">
+                                   <label for="accountNumber" class="form-label">Account Number</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                   <input type="text" class="form-control" id="postalCode" placeholder="Postal Code">
+                                   <label for="postalCode" class="form-label">Postal Code</label>
+                              </div>
+                              <div class="toast-footer border-top py-2 d-flex align-items-center justify-content-between">
+                                   <a href="subscribe" title="Not An Active Subscriber">Not An Active Subscriber</a>
+                                   <a type="submit" class="btn btn-primary">Find My Account</a>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+		<div class="container pt-3 py-md-4">
+			<div class="row">
+                    {{> partials/includes/magazine-info}}
+				<aside id="subscribe" class="col-md-8 order-1 order-md-2">
+					<div id="subscriptionBox" class="card">
+						<div id="subscriptionTypeContent">
+							<div class="card-body p-0">
+								<div class="card-header row align-items-center py-3 px-3 border-bottom bg-gray-darker border-dark g-0"> 
+									<div class="col-12 col-lg-6 text-center text-lg-start">
+										<h4 class="card-title mb-2 text-white"><span class="d-block small text-primary">Keep the Creativity FLowing</span>With A Subscription Renewal</h4>
+									</div>
+									<div class="col-12 col-lg-6 text-center text-lg-end">
+                                                  {{> partials/includes/subscription-nav}}
+									</div> 
+								</div>
+								<div class="row align-items-center p-2">
+									<form id="subscriptionForm" class="col">
+										<div class="row px-3">
+											<div class="col-12 p-3 bg-white">
+												<h6 class="m-0 text-uppercase text-gray-dark">Select Country & Term</h6>
+											</div>
+										</div>
+										<div class="row px-3">
+											<div id="countrySelector" class="col-12 accordion p-3 pt-0">
+												<div class="row align-items-center">
+													{{> partials/includes/parts/country-nav}}
+													<div class="col tab-content py-1 px-3 bg-gray-lighter rounded border">
+														<div class="tab-pane fade show active" id="us-tab-pane" role="tabpanel" aria-labelledby="us-tab" tabindex="0">
+															<fieldset class="position-relative form-group">
+																<div class="form-check m-0 p-0">
+																	<div class="row">
+																		<div class="col-sm-8 text-center text-sm-start d-sm-flex align-items-center">
+																			<input name="product" id="productPB-1241" type="radio" value="PB-1241" checked>
+																			<label class="best-deal" for="productPB-1241" class="form-check-label"><strong>1 Year</strong> of Print Access</label>
+																		</div>
+																		<div class="col-sm-4 text-center text-sm-end">
+																			<strong class="price text-primary fs-5">$21.97 <sup class="text-gray-dark">*</sup></strong>
+																		</div>
+																	</div>
+																</div>
+															</fieldset>
+														</div>
+														<div class="tab-pane fade" id="canada-tab-pane" role="tabpanel" aria-labelledby="canada-tab" tabindex="0">
+															<fieldset class="position-relative form-group">
+																<div class="form-check m-0 p-0">
+																	<div class="row align-items-center">
+																		<div class="col-sm-8 text-center text-sm-start">
+																			<input class="me-2" name="product" id="productPB-1232" type="radio" value="PB-1232">
+																			<label for="productPB-1232" class="form-check-label"><strong>1 Year</strong> of Print Access</label>
+																		</div>
+																		<div class="col-sm-4 text-center text-sm-end">
+																			<strong class="price text-primary fs-5">$28.97 <sup class="text-gray-dark">*</sup></strong>
+																		</div>
+																	</div>
+																</div>
+															</fieldset>
+														</div>
+														<div class="tab-pane fade" id="international-tab-pane" role="tabpanel" aria-labelledby="international-tab" tabindex="0">
+															<fieldset class="position-relative form-group">
+																<div class="form-check m-0 p-0">
+																	<div class="row align-items-center">
+																		<div class="col-sm-8 text-center text-sm-start">
+																			<input class="me-2" name="product" id="productPB-1236" type="radio" value="PB-1236">
+																			<label for="productPB-1236" class="form-check-label"><strong>1 Year</strong> of Print Access</label>
+																		</div>
+																		<div class="col-sm-4 text-center text-sm-end">
+																			<strong class="price text-primary fs-5">$36.97 <sup class="text-gray-dark">*</sup></strong>
+																		</div>
+																	</div>
+																</div>
+															</fieldset>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row p-3 align-items-center">
+											<div class="col-sm-4">
+												<h6 class="m-0 text-uppercase text-gray-dark pe-2">Addresses</h6>
+											</div>
+
+											<div class="col-sm-8 6 form-check mb-0">
+												<input class="form-check-input" type="checkbox" value="" id="mailingAddressDifferent" class="ms-md-auto">
+												<label class="form-check-label" for="mailingAddressDifferent">
+													I have a different delivery address
+												</label>
+											</div>
+										</div>
+
+										<div id="deliveryWrapper" class="collapse py-3 mb-3 mx-3 bg-gray-lighter rounded border">
+											<div class="row px-3">
+												<div class="col">
+													<p class="fw-normal">Delivery Address</p>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryFirstName" placeholder="First Name" required maxlength="32">
+													<label for="deliveryFirstName">First Name</label>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryLastName" placeholder="Last Name" required maxlength="32">
+													<label for="deliveryLastName">Last Name</label>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryAddress" placeholder="Address" required>
+													<label for="deliveryAddress">Address</label>
+												</div>
+												<div class="col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryAddress2" placeholder="Address Line 2">
+													<label for="deliveryAddress2">Address Line 2</label>
+													<!-- Address Fit Ttrigger Modal -->
+													<span class="help-text d-block fs-6 text-muted mt-2 text-end"><a href="" data-bs-toggle="modal" data-bs-target="#addressDoesntFit" title="Address Doesn't Fit">Address doesn’t fit?</a></span>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryCity" placeholder="City" required maxlength="32">
+													<label for="deliveryCity">City</label>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating">
+													<input class="form-control" list="deliveryProvinceOptions" id="deliveryProvince" placeholder="Choose Province/State" required>
+													<label for="deliveryProvince" class="form-label">Choose Province/State</label>
+													<datalist id="deliveryProvinceOptions">
+                                                                      {{> partials/includes/forms/state-options}}
+													</datalist>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryPostalCode" placeholder="Zip/Postal Code" required maxlength="12">
+													<label for="deliveryPostalCode">Zip/Postal Code</label>
+												</div>
+												<div class="col-sm-6 form-floating">
+													<input class="form-control" list="deliveryCountryOptions" id="deliveryCountry" placeholder="Choose Country" required>
+													<label for="deliveryCountry" class="form-label">Choose Country</label>
+													<datalist id="deliveryCountryOptions">
+                                                                      {{> partials/includes/forms/country-options}}
+													</datalist>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="deliveryPhoneNumber" placeholder="Phone" required maxlength="16">
+													<label for="deliveryPhoneNumber">Phone</label>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating">
+													<input type="text" class="form-control" id="deliveryEmail" placeholder="Email" required maxlength="32" error="Email address is missing">
+													<label for="deliveryEmail">Email</label>
+													<span class="help-text d-block fs-6 text-muted mt-2">Will be used in accordance with our <a href="#" title="User Agreement" target="_blank">User Agreement</a> & <a href="https://s31226.p831.sites.pressdns.com/privacy-policy" title="Privacy Policy" target="_blank">Privacy Policy</a>.</span>
+												</div>
+											</div>
+										</div>
+
+										<div id="billingWapper" class="py-3 mb-3 mx-3 bg-gray-lighter rounded border">
+											<div class="row px-3">
+												<div class="col">
+													<p class="fw-normal">Billing Address</p>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="userFirstName" placeholder="First Name" required maxlength="32">
+													<label for="userFirstName">First Name</label>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="userLastName" placeholder="Last Name" required maxlength="32">
+													<label for="userLastName">Last Name</label>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="userAddress" placeholder="Address" required>
+													<label for="userAddress">Address</label>
+												</div>
+												<div class="col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="userAddress2" placeholder="Address Line 2">
+													<label for="userAddress2">Address Line 2</label>
+													<!-- Address Fit Ttrigger Modal -->
+													<span class="help-text d-block fs-6 text-muted mt-2 text-end"><a href="" data-bs-toggle="modal" data-bs-target="#addressDoesntFit" title="Address Doesn't Fit">Address doesn’t fit?</a></span>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="userCity" placeholder="City" required maxlength="32">
+													<label for="userCity">City</label>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input class="form-control" list="userProvinceOptions" id="userProvince" placeholder="Choose Province/State" required>
+													<label for="userProvince" class="form-label">Choose Province/State</label>
+													<datalist id="userProvinceOptions">
+                                                                      {{> partials/includes/forms/state-options}}
+													</datalist>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col form-floating mb-3">
+													<input type="text" class="form-control" id="userPostalCode" placeholder="Zip/Postal Code" required maxlength="12">
+													<label for="userPostalCode">Zip/Postal Code</label>
+												</div>
+												<div class="col-sm-6 form-floating mb-3">
+													<input class="form-control" list="userCountryOptions" id="userCountry" placeholder="Choose Country" required>
+													<label for="userCountry" class="form-label">Choose Country</label>
+													<datalist id="userCountryOptions">
+                                                                      {{> partials/includes/forms/country-options}}
+													</datalist>
+												</div>
+											</div>
+											<div class="row px-3">
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+													<input type="text" class="form-control" id="userPhoneNumber" placeholder="Phone" required maxlength="16">
+													<label for="userPhoneNumber">Phone</label>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating">
+													<input type="text" class="form-control" id="userEmail" placeholder="Email" required maxlength="32" error="Email address is missing">
+													<label for="userEmail">Email</label>
+													<span class="help-text d-block fs-6 text-muted mt-2">Will be used in accordance with our <a href="#" title="User Agreement" target="_blank">User Agreement</a> & <a href="https://s31226.p831.sites.pressdns.com/privacy-policy" title="Privacy Policy" target="_blank">Privacy Policy</a>.</span>
+												</div>
+											</div>
+										</div>
+
+                                                  {{> partials/includes/forms/payment-wrapper}}
+                                                  
+                                                  {{> partials/includes/forms/fine-print}}
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+
+{{> partials/structure/close }}

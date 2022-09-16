@@ -1,0 +1,68 @@
+
+<!-- Start Billing Wrapper -->
+<div id="billingWapper" class="py-3 mb-3 mx-3 bg-gray-lighter rounded border">
+	<div class="row px-3">
+		<div class="col">
+			<p class="fw-normal">Billing Address</p>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="userFirstName" placeholder="First Name" required maxlength="32">
+			<label for="userFirstName">First Name</label>
+		</div>
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="userLastName" placeholder="Last Name" required maxlength="32">
+			<label for="userLastName">Last Name</label>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="userAddress" placeholder="Address" required>
+			<label for="userAddress">Address</label>
+		</div>
+		<div class="col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="userAddress2" placeholder="Address Line 2">
+			<label for="userAddress2">Address Line 2</label>
+			<!-- Address Fit Ttrigger Modal -->
+			<span class="help-text d-block fs-6 text-muted mt-2 text-end"><a href="" data-bs-toggle="modal" data-bs-target="#addressDoesntFit" title="Address Doesn't Fit">Address doesn’t fit?</a></span>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="userCity" placeholder="City" required maxlength="32">
+			<label for="userCity">City</label>
+		</div>
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input class="form-control" list="userProvinceOptions" id="userProvince" placeholder="Choose Province/State" required>
+			<label for="userProvince" class="form-label">Choose Province/State</label>
+			<datalist id="userProvinceOptions">
+				<?php include 'includes/forms/state-options.php';?>
+			</datalist>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col form-floating mb-3">
+			<input type="text" class="form-control" id="userPostalCode" placeholder="Zip/Postal Code" required maxlength="12">
+			<label for="userPostalCode">Zip/Postal Code</label>
+		</div>
+		<div class="col-sm-6 form-floating mb-3">
+			<input class="form-control" list="userCountryOptions" id="userCountry" placeholder="Choose Country" required>
+			<label for="userCountry" class="form-label">Choose Country</label>
+			<datalist id="userCountryOptions">
+				<?php include 'includes/forms/country-options.php';?>
+			</datalist>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating mb-3">
+			<input type="text" class="form-control" id="userPhoneNumber" placeholder="Phone" required maxlength="16">
+			<label for="userPhoneNumber">Phone</label>
+		</div>
+		<div class="col-12 col-sm-6 col-md-12 col-lg-6 form-floating">
+			<input type="text" class="form-control" id="userEmail" placeholder="Email" required maxlength="32" error="Email address is missing">
+			<label for="userEmail">Email</label>
+			<span class="help-text d-block fs-6 text-muted mt-2">Will be used in accordance with our <a href="#" title="User Agreement" target="_blank">User Agreement</a> & <a href="https://s31226.p831.sites.pressdns.com/privacy-policy" title="Privacy Policy" target="_blank">Privacy Policy</a>.</span>
+		</div>
+	</div>
+</div>
