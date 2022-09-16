@@ -5,7 +5,7 @@ const pageData = {
   '/index.html': {
     title: 'Subscribe',
   },
-  '/give-a-gift.html': {
+  '/giveagift.html': {
     title: 'Give A Gift',
   },
   '/renew.html': {
